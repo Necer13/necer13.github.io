@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="komputer, IT" content="Zastosowania komputerów">
+		<title>Computer aplications and science</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+		<body >
+	<center>
+
+<SCRIPT LANGUAGE= "JavaScript" type= "text/javascript">
+function wyswietlDane()
+{
+  var data = new Date();
+  var godziny = data.getHours();
+  var minuty = data.getMinutes();
+  var sekundy = data.getSeconds();
+  var czas = godziny;
+  czas += ((minuty < 10) ? ":0" : ":") + minuty;
+  czas += ((sekundy < 10) ? ":0" : ":") + sekundy;
+  var miesiac = data.getMonth() + 1;
+  if (miesiac < 9){
+    miesiac = "0" + miesiac;
+  }
+  var dzien = data.getDate();
+  if (dzien < 9){
+    dzien = "0" + dzien;
+  }
+  var rok = data.getYear();
+  if (rok < 1000){
+    rok = 2000 + rok - 100;
+  }
+  var dzisiaj = dzien + "." + miesiac + "." + rok;
+
+  var dzienTygodnia = data.getDay();
+  switch(dzienTygodnia){
+    case 0: dzienTygodnia = "niedziela"; break;
+    case 1: dzienTygodnia = "poniedziałek"; break;
+    case 2: dzienTygodnia = "wtorek"; break;
+    case 3: dzienTygodnia = "środa"; break;
+    case 4: dzienTygodnia = "czwartek"; break;
+    case 5: dzienTygodnia = "piątek"; break;
+    case 6: dzienTygodnia = "sobota"; break;
+  }
+
+  var tekst = "Dziś jest " + dzienTygodnia + ", " + dzisiaj;
+  tekst += "<BR>";
+  tekst += czas;
+  document.getElementById("dataLayer").innerHTML = tekst;
+  timerID = setTimeout("wyswietlDane()",1000);
+}
+</SCRIPT>
+</HEAD>
+<BODY onLoad="wyswietlDane()" bgcolor="Gainsboro">
+<DIV
+  ID="dataLayer"
+  STYLE="
+    visibility: visible;
+    color: black;
+    position: top;
+    font-weight:bold;
+    top: 20;
+    left: 20;"
+	font-family: comic sans MS"
+>
+</DIV>
+</center>	
+	
+	
+		<table id="table1">
+		<tr >
+		</tr>
+	<td><h2>MENU</h2>
+	<tr>
+			<td width="250px"><a href="trafficlight.html" target="podstrony"><img src="menu1.png" alt="obraz1" name="obraz" onMouseOut="this.src='menu1.png'" 
+			onMouseOver="this.src='menu1_1.png'"; onClick="this.src='menu1_1.png'" /></a></td></tr>
+			<td width="250px"><a href="implants.html" target="podstrony"><img src="menu2.png" alt="obraz1" name="obraz" onMouseOut="this.src='menu2.png'" 
+			onMouseOver="this.src='menu2_1.png'"; onClick="this.src='menu2_1.png'" /></a></td></tr>
+			<td width="250px" ><a href="Vechicle.html" target="podstrony"><img src="menu3.png" alt="obraz1" name="obraz" onMouseOut="this.src='menu3.png'" 
+			onMouseOver="this.src='menu3_1.png'"; onClick="this.src='menu3_1.png'" /></a></td></tr>
+			<td width="250px"><a href="medical.html" target="podstrony"><img src="menu4.png" alt="obraz1" name="obraz" onMouseOut="this.src='menu4.png'" 
+			onMouseOver="this.src='menu4_1.png'"; onClick="this.src='menu4_1.png'" /></a></td></tr>
+			<td width="250px"><a href="Robotics.html" target="podstrony"><img src="menu5.png" alt="obraz1" name="obraz" onMouseOut="this.src='menu5.png'" 
+			onMouseOver="this.src='menu5_1.png'"; onClick="this.src='menu5_1.png'" /></a></td>
+			
+		</tr>
+		</table>
+		
+		</body>
+		</html>
